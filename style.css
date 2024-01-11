@@ -1,0 +1,116 @@
+*{
+margin: 0;
+padding: 0;
+font-family: sans-serif;
+box-sizing: border-box;
+}
+body{
+background: linear-gradient(to top,#00bfff, #ffff);
+min-height: 100vh;
+}
+.clock{
+width: 600px;
+height: 600px;
+background-color: red;
+border-radius: 50%;
+margin: 50px auto;
+border: 15px solid #000;
+position: relative;
+display: flex;
+justify-content: center;
+text-align: center;
+}
+.cel{
+position: absolute;
+width: 100%;
+font-size: 2rem;
+font-weight: 700;
+padding: 10px;
+height: 100%;
+transform: rotate(calc(var(--rota)*1deg));
+color: white;
+
+}
+
+.cel-1{
+--rota:30;
+}
+
+.cel-2{
+--rota:60;
+}
+
+.cel-3{
+--rota:90;
+}
+
+.cel-4{
+--rota:120;
+}
+
+.cel-5{
+--rota:150;
+}
+
+.cel-6{
+--rota:180;
+}
+
+.cel-7{
+--rota:210;
+}
+
+.cel-8{
+--rota:240;
+}
+
+.cel-9{
+--rota:270;
+}
+
+.cel-10{
+--rota:300;
+}
+
+.cel-11{
+--rota:330;
+}
+.hame{
+position: absolute;
+transform-origin: bottom center;
+bottom: 50%;
+left: 50%;
+transform: rotate(0deg);
+border-radius: 5px 5px 0 0 ;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.seconds{
+background-color: gray;
+height: 40%;
+width: 4px;
+}
+.minutes{
+background-color: black;
+height: 35%;
+width: 7px;
+}
+.hours{
+background-color: black;
+height: 25%;
+width: 10px;
+border-radius: 7px 7px 0 0;
+}
+.cir{
+background-color: #000;
+width: 30px;
+height: 30px;
+border-radius: 15px;
+top: 48%;
+position: absolute;
+left: 48%;
+z-index: 10;
+
+}
