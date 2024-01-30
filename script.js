@@ -2,19 +2,21 @@ const seconds = document.querySelector(".seconds")
 const minutes = document.querySelector(".minutes")
 const hours = document.querySelector(".hours")
 
-const timenow=()=>{
-const time = new Date()
-return{
-secondsnew : time.getSeconds()*6,
-minutesnew : time.getMinutes()*6,
-hoursnew : time.getMinutes()*30
-}
 
-}
+
+
+const timenow =()=>{
+const time = new(Date)
+const secondsnow = time.getSeconds()*6
+const minutesnow = time.getMinutes()*6
+const horsnow = time.getHours()*30
+
+hours.style.transform=`rotate(${horsnow}deg)`
+minutes.style.transform=`rotate(${minutesnow}deg)`
+seconds.style.transform=`rotate(${secondsnow}deg)`
+} 
+
 setInterval(()=>{
-const {secondsnew,minutesnew,hoursnew}=timenow()
-seconds.style.transform= `rotate(${secondsnew}deg)`
-minutes.style.transform= `rotate(${minutesnew}deg)`
-hours.style.transform= `rotate(${hoursnew}deg)`
+timenow()
 
 },1000)
